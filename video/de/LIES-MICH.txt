@@ -1,0 +1,8 @@
+DEUTSCHE FASSUNG
+
+Hier liegt die deutsche Fassung des Films als  film.mp4
+(für die Website komprimiert, ca. 16,5 MB).
+
+Soll eine neue Fassung auf die Seite, die alte Datei einfach durch die
+neue ersetzen, wieder mit dem Namen  film.mp4 .
+Export-Einstellungen siehe LIES-MICH.txt im Ordner "en".

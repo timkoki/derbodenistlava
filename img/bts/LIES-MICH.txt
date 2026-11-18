@@ -1,0 +1,21 @@
+BEHIND THE SCENES
+
+1. Bilder in diesen Ordner legen. Namen frei wählbar, zum Beispiel
+   kamera-setup.jpg oder team-am-set.jpg.
+   Möglich sind .jpg, .png und .webp.
+
+2. Die Dateinamen in die Datei  liste.txt  eintragen, ein Name pro Zeile,
+   genau so geschrieben wie die Datei (Groß- und Kleinschreibung zählt).
+   Die Reihenfolge in der Liste ist die Reihenfolge auf der Website.
+
+Am besten ohne Leerzeichen und Umlaute im Dateinamen (also "team-am-set.jpg"
+statt "Team am Set.jpg"), das ist am robustesten.
+
+Größe: lange Seite etwa 2000 px, JPG-Qualität ca. 80,
+also etwa 200 bis 500 KB pro Bild. Bis zu 40 Bilder werden angezeigt.
+
+Ohne Liste geht es auch: dann die Bilder 01.jpg, 02.jpg, 03.jpg ...
+nennen (zweistellig, lückenlos), und die Seite findet sie automatisch.
+
+Solange kein Bild gefunden wird, ist der Abschnitt "Behind the Scenes"
+auf der Website komplett ausgeblendet, auch in der Navigation.

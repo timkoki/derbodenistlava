@@ -1,0 +1,21 @@
+ENGLISCHE FASSUNG
+
+Hier die englische Fassung des Films als  film.mp4  ablegen.
+Genau dieser Dateiname, alles klein geschrieben.
+
+Sobald die Datei hier liegt, spielt die Website sie automatisch ab,
+wenn jemand auf EN umschaltet. Sonst muss nichts geändert werden.
+
+Export-Einstellungen (wie bei der deutschen Fassung):
+- Format: MP4, Codec H.264, Ton AAC
+- Auflösung: 1920 x 1080
+- Bitrate: etwa 2 Mbit/s Video, 128 kbit/s Ton
+- Dateigröße: unter 100 MB (Grenze von GitHub), ideal unter 25 MB
+- Beim Export "Für Web optimieren" bzw. "Fast Start" aktivieren,
+  damit der Film sofort startet
+
+Optional: Gibt es die englische Fassung auch auf YouTube, die Video-ID
+in index.html beim Player bei data-youtube-en eintragen.
+Dann zeigt der Link "Watch on YouTube" auf die englische Fassung.
+
+Diese Textdatei kann im Ordner bleiben.

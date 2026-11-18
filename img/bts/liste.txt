@@ -1,0 +1,8 @@
+# Behind the Scenes: hier die Dateinamen der Bilder eintragen, eins pro Zeile.
+# Die Reihenfolge hier ist die Reihenfolge auf der Website.
+# Zeilen mit # am Anfang werden ignoriert. Groß- und Kleinschreibung beachten.
+#
+# Beispiel:
+# kamera-setup.jpg
+# finn-in-der-maske.jpg
+# team-am-set.png
