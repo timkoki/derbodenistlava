@@ -12,11 +12,13 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="Tim Kokemoor, Jahn Krieger, Moritz Schwarz">
 <meta name="theme-color" content="#121110">
+<link rel="canonical" href="https://derbodenistlava.tim-kokemoor.de/">
+<meta property="og:url" content="https://derbodenistlava.tim-kokemoor.de/">
 <meta property="og:type" content="video.movie">
 <meta property="og:site_name" content="Der Boden ist Lava">
 <meta property="og:title" content="Der Boden ist Lava · Spec Ad für GERICS">
 <meta property="og:description" content="Drei Kinder spielen in einer aufgeheizten Stadt „Der Boden ist Lava“. Der Asphalt wird zur Gefahr, sicher sind nur die wenigen Grünflächen.">
-<meta property="og:image" content="img/og-image.jpg">
+<meta property="og:image" content="https://derbodenistlava.tim-kokemoor.de/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Ein Turnschuh klebt am heißen Asphalt fest">
@@ -25,15 +27,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Der Boden ist Lava · Spec Ad für GERICS">
 <meta name="twitter:description" content="Drei Kinder spielen in einer aufgeheizten Stadt „Der Boden ist Lava“. Der Asphalt wird zur Gefahr, sicher sind nur die wenigen Grünflächen.">
-<meta name="twitter:image" content="img/og-image.jpg">
+<meta name="twitter:image" content="https://derbodenistlava.tim-kokemoor.de/img/og-image.jpg">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@graph": [
   {
    "@type": "WebSite",
-   "@id": "#website",
-   "url": "./",
+   "@id": "https://derbodenistlava.tim-kokemoor.de/#website",
+   "url": "https://derbodenistlava.tim-kokemoor.de/",
    "name": "Der Boden ist Lava",
    "inLanguage": [
     "de",
@@ -42,10 +44,10 @@
   },
   {
    "@type": "Movie",
-   "@id": "#film",
+   "@id": "https://derbodenistlava.tim-kokemoor.de/#film",
    "name": "Der Boden ist Lava",
    "alternateName": "The Floor Is Lava",
-   "url": "./",
+   "url": "https://derbodenistlava.tim-kokemoor.de/",
    "genre": [
     "Spec Ad",
     "Werbefilm",
@@ -59,7 +61,7 @@
     "name": "DE"
    },
    "inLanguage": "de",
-   "image": "img/og-image.jpg",
+   "image": "https://derbodenistlava.tim-kokemoor.de/img/og-image.jpg",
    "director": [
     {
      "@type": "Person",
@@ -138,16 +140,16 @@
     }
    ],
    "trailer": {
-    "@id": "#video"
+    "@id": "https://derbodenistlava.tim-kokemoor.de/#video"
    }
   },
   {
    "@type": "VideoObject",
-   "@id": "#video",
+   "@id": "https://derbodenistlava.tim-kokemoor.de/#video",
    "name": "Der Boden ist Lava",
    "description": "Spec Ad für GERICS, Climate Service Center Germany. Von Tim Kokemoor, Jahn Krieger und Moritz Schwarz.",
-   "thumbnailUrl": "img/og-image.jpg",
-   "contentUrl": "video/de/film.mp4",
+   "thumbnailUrl": "https://derbodenistlava.tim-kokemoor.de/img/og-image.jpg",
+   "contentUrl": "https://derbodenistlava.tim-kokemoor.de/video/de/film.mp4",
    "uploadDate": "2026-10-30",
    "duration": "PT1M19S",
    "inLanguage": "de"
@@ -181,8 +183,10 @@
   img,video{display:block;max-width:100%}
   a{color:inherit}
   ::selection{background:var(--lava);color:var(--ink)}
+  .logline ::selection,.facts ::selection{background:var(--ink);color:var(--lava)}
+  .credits ::selection{background:var(--lava);color:var(--ink)}
 
-  .display{font-family:var(--f-display);font-weight:900;font-synthesis:none;text-transform:uppercase;letter-spacing:-.005em;line-height:1.06;font-variation-settings:"wdth" 50}
+  .display{font-family:var(--f-display);font-weight:700;font-synthesis:none;text-transform:uppercase;letter-spacing:-.005em;line-height:1.06;font-variation-settings:"wdth" 50}
   .cond{font-family:var(--f-cond);font-variation-settings:"wdth" 50}
   .label{font-family:var(--f-cond);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 50}
 
@@ -192,7 +196,7 @@
   .bar.solid{background:rgba(246,244,239,.94);color:var(--ink);padding-top:12px;padding-bottom:12px;pointer-events:auto;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .bar a{pointer-events:auto;text-decoration:none}
   .bar nav{display:flex;gap:clamp(14px,2.4vw,36px)}
-  .bar .mark{font-family:var(--f-display);font-weight:900;font-size:19px;letter-spacing:.01em;text-transform:uppercase;font-variation-settings:"wdth" 50}
+  .bar .mark{font-family:var(--f-display);font-weight:700;font-size:19px;letter-spacing:.01em;text-transform:uppercase;font-variation-settings:"wdth" 50}
   @media (max-width:720px){ .bar nav a:not(.keep){display:none} }
   .bar nav{align-items:center}
 
@@ -243,7 +247,7 @@
     .more-btn{display:inline-flex;margin-top:22px;padding:12px 16px;background:none;border:1.5px solid var(--ink);color:var(--ink);font-family:var(--f-cond);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-variation-settings:"wdth" 50}
     .facts dl > div.m-hide{display:none}
   }
-  .logline .syn .tag{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(22px,2vw,30px);line-height:1.1;margin-top:1.4em;font-variation-settings:"wdth" 50}
+  .logline .syn .tag{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(22px,2vw,30px);line-height:1.1;margin-top:1.4em;font-variation-settings:"wdth" 50}
   @media (max-width:860px){ .logline blockquote,.logline .syn{grid-column:1/-1} }
 
   /* ---------- facts ---------- */
@@ -251,7 +255,7 @@
   .facts dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
   .facts dl > div{padding:18px 18px 22px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
   .facts dl > div:nth-child(4n+1){border-left:0;padding-left:0}
-  .facts dt{color:var(--muted);margin-bottom:6px}
+  .facts dt{color:#4f4c47;margin-bottom:6px}
   .facts dd{font-family:var(--f-cond);font-weight:600;font-size:22px;line-height:1.15;text-transform:uppercase;font-variation-settings:"wdth" 50}
   @media (max-width:860px){ .facts dl{grid-template-columns:repeat(2,minmax(0,1fr))} .facts dl > div{border-left:1px solid var(--line);padding-left:16px} .facts dl > div:nth-child(odd){border-left:0;padding-left:0} .facts dd{font-size:19px} }
 
@@ -268,7 +272,7 @@
   .play .tri{width:clamp(64px,7vw,104px);aspect-ratio:1;border-radius:50%;background:var(--lava);display:grid;place-items:center;transition:transform .25s}
   .play .tri::before{content:"";margin-left:9%;border-style:solid;border-width:.6em 0 .6em 1em;border-color:transparent transparent transparent var(--ink);font-size:clamp(18px,2vw,30px)}
   .play:hover .tri{transform:scale(1.06)}
-  .play .t{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(34px,4.6vw,76px);line-height:1;font-variation-settings:"wdth" 50}
+  .play .t{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(34px,4.6vw,76px);line-height:1;font-variation-settings:"wdth" 50}
   .play .t small{display:block;font-family:var(--f-cond);font-weight:600;font-size:14px;letter-spacing:.14em;color:#fff;margin-top:10px;font-variation-settings:"wdth" 50}
   .player.on .play,.player.on > img{display:none}
   .watch-note{margin-top:14px;color:rgba(246,244,239,.55);font-size:14px}
@@ -369,6 +373,7 @@
   </nav>
 </header>
 
+<main id="inhalt">
 <section class="hero" id="top">
   <picture>
     <source media="(max-aspect-ratio: 1/1)" srcset="img/hero-poster-mobile.jpg">
@@ -433,7 +438,7 @@
        YouTube-Link unter dem Player: Video-ID in data-youtube-de / data-youtube-en (Teil nach "watch?v="). -->
   <div class="player" id="player" data-film-de="video/de/film.mp4" data-film-en="video/en/film.mp4" data-youtube-de="0uduK2o4YuY" data-youtube-en="">
     <img src="img/still-01.jpg" alt="">
-    <a class="play" href="video/de/film.mp4" aria-label="Film abspielen" data-i18n-aria="play.aria">
+    <a class="play" href="video/de/film.mp4">
       <span class="tri" aria-hidden="true"></span>
       <span class="t" data-i18n="play">Film ansehen<small>1 min 19 s · mit Ton</small></span>
     </a>
@@ -508,6 +513,8 @@
     <a class="btn" href="#" data-i18n="contact.btn">Screener anfragen <span aria-hidden="true">→</span></a>
   </div>
 </section>
+
+</main>
 
 <footer class="label">
   <span>Der Boden ist Lava · 2026 · Kokemoor / Krieger / Schwarz</span>
