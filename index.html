@@ -160,14 +160,8 @@
  ]
 }
 </script>
+<script src="js/rv-init.js"></script>
 <style>
-  @font-face{font-family:"Anton";src:url(fonts/anton-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow";src:url(fonts/barlow-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow";src:url(fonts/barlow-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
   :root{
     --lava:#FEED00;
     --ink:#121110;
@@ -175,10 +169,10 @@
     --muted:#6d6a64;
     --line:rgba(18,17,16,.16);
     --pad:clamp(20px,4.2vw,64px);
-    /* Roc Grotesk Variable (Adobe Fonts, Kit qnu3biy): Breite über "wdth" (50 = Compressed, 100 = normal). Anton/Barlow nur als Fallback. */
-    --f-display:"roc-grotesk-variable","Anton",Impact,sans-serif;
-    --f-cond:"roc-grotesk-variable","Barlow Condensed",sans-serif;
-    --f-body:"roc-grotesk-variable","Barlow",system-ui,sans-serif;
+    /* Roc Grotesk Variable (Adobe Fonts, Kit qnu3biy): Breite über "wdth" (50 = Compressed, 100 = normal). Ohne Kit greifen Systemschriften. */
+    --f-display:"roc-grotesk-variable","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+    --f-cond:"roc-grotesk-variable","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+    --f-body:"roc-grotesk-variable",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -191,7 +185,7 @@
 
   .display{font-family:var(--f-display);font-weight:700;font-synthesis:none;text-transform:uppercase;letter-spacing:-.005em;line-height:1.06;font-variation-settings:"wdth" 50}
   .cond{font-family:var(--f-cond);font-variation-settings:"wdth" 50}
-  .label{font-family:var(--f-cond);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-variation-settings:"wdth" 50}
+  .label{font-family:var(--f-cond);font-weight:600;font-size:clamp(14px,1.1vw,17px);line-height:1.25;letter-spacing:.09em;text-transform:uppercase;font-variation-settings:"wdth" 80}
 
   /* ---------- top bar ---------- */
   .bar{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;
@@ -240,16 +234,9 @@
   .logline .bg .label{grid-column:1/7;margin:0}
   .logline .bg .syn{margin-top:0}
   @media (max-width:860px){ .logline .bg .label{margin-bottom:18px} }
-  .more-btn{display:none}
-  .logline .syn .more{margin-top:1em}
-  @media (max-width:720px){
-    .logline .more{display:none}
-    .logline.open .more{display:block}
-    .logline.open .grid.more{display:grid}
-    .logline.open .more-btn{display:none}
-    .more-btn{display:inline-flex;margin-top:22px;padding:12px 16px;background:none;border:1.5px solid var(--ink);color:var(--ink);font-family:var(--f-cond);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-variation-settings:"wdth" 50}
-    .facts dl > div.m-hide{display:none}
-  }
+  .more-btn{display:none;margin-top:26px;padding:12px 16px;background:none;border:1.5px solid var(--ink);color:var(--ink);font-family:var(--f-cond);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-variation-settings:"wdth" 50;transition:background .2s,color .2s}
+  .more-btn:hover{background:var(--ink);color:var(--lava)}
+  @media (max-width:720px){ .logline .more{display:none} .logline.open .more{display:block} .more-btn{display:inline-flex} }
   .logline .syn .tag{font-family:var(--f-display);font-weight:700;text-transform:uppercase;font-size:clamp(22px,2vw,30px);line-height:1.1;margin-top:1.4em;font-variation-settings:"wdth" 50}
   @media (max-width:860px){ .logline blockquote,.logline .syn{grid-column:1/-1} }
 
@@ -258,9 +245,9 @@
   .facts dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
   .facts dl > div{padding:18px 18px 22px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
   .facts dl > div:nth-child(4n+1){border-left:0;padding-left:0}
-  .facts dt{color:#4f4c47;margin-bottom:6px}
-  .facts dd{font-family:var(--f-cond);font-weight:600;font-size:22px;line-height:1.15;text-transform:uppercase;font-variation-settings:"wdth" 50}
-  @media (max-width:860px){ .facts dl{grid-template-columns:repeat(2,minmax(0,1fr))} .facts dl > div{border-left:1px solid var(--line);padding-left:16px} .facts dl > div:nth-child(odd){border-left:0;padding-left:0} .facts dd{font-size:19px} }
+  .facts dt{color:#4f4c47;margin-bottom:8px}
+  .facts dd{font-family:var(--f-cond);font-weight:600;font-size:clamp(24px,2vw,32px);line-height:1.15;text-transform:uppercase;font-variation-settings:"wdth" 50}
+  @media (max-width:860px){ .facts dl{grid-template-columns:repeat(2,minmax(0,1fr))} .facts dl > div{border-left:1px solid var(--line);padding-left:16px} .facts dl > div:nth-child(odd){border-left:0;padding-left:0} .facts dd{font-size:22px} }
 
   section{scroll-margin-top:56px}
   /* ---------- film player ---------- */
@@ -270,6 +257,8 @@
   .player{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
   .player img,.player video,.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
   .player video{object-fit:contain}
+  /* Untertitel im Stil der Seite */
+  .player video::cue{font-family:var(--f-body);font-weight:500;font-size:clamp(15px,1.6vw,24px);line-height:1.3;color:var(--lava);background:rgba(18,17,16,.78)}
   .play{position:absolute;inset:0;display:flex;text-decoration:none;align-items:flex-end;justify-content:flex-start;gap:clamp(14px,1.6vw,24px);
         padding:clamp(18px,3vw,44px);background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0) 55%);border:0;cursor:pointer;color:var(--lava);text-align:left}
   .play .tri{width:clamp(64px,7vw,104px);aspect-ratio:1;border-radius:50%;background:var(--lava);display:grid;place-items:center;transition:transform .25s}
@@ -359,6 +348,18 @@
   footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px var(--pad) 28px;border-top:1px solid var(--line);color:var(--muted)}
 
 
+
+  /* ---------- Aufbau-Animationen (nur mit JS und ohne "Bewegung reduzieren") ---------- */
+  .mw{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .02em .06em;margin:0 -.02em -.06em}
+  .mi{display:inline-block}
+  html.rv .mi{transform:translateY(105%);filter:blur(5px);transition:transform .7s cubic-bezier(.2,.8,.1,1) calc(var(--d,0s) + var(--w,0s)),filter .6s ease calc(var(--d,0s) + var(--w,0s))}
+  html.rv .in .mi{transform:none;filter:none}
+  html.rv [data-rv="up"]{opacity:0;transform:translateY(20px);filter:blur(8px);transition:opacity .55s cubic-bezier(.2,.7,.1,1) var(--d,0s),transform .6s cubic-bezier(.2,.7,.1,1) var(--d,0s),filter .55s ease var(--d,0s)}
+  html.rv [data-rv="up"].in{opacity:1;transform:none;filter:none}
+  html.rv [data-rv="clip"] > *{clip-path:inset(100% 0 0 0);transition:clip-path .75s cubic-bezier(.7,0,.2,1) var(--d,0s)}
+  html.rv [data-rv="clip"].in > *{clip-path:inset(0 0 0 0)}
+  html.rv [data-rv="clip"] img{transform:scale(1.08);filter:blur(6px);transition:transform 1.05s cubic-bezier(.2,.7,.1,1) var(--d,0s),filter .75s ease var(--d,0s)}
+  html.rv [data-rv="clip"].in img{transform:none;filter:none}
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 </style>
 </head>
@@ -397,17 +398,15 @@
   <div class="grid">
     <span class="label" data-i18n="logline.label">Logline</span>
     <blockquote data-i18n="logline">Drei Kinder spielen in einer aufgeheizten Stadt „Der Boden ist Lava“. Der Asphalt wird zur Gefahr, sicher sind nur die wenigen Grünflächen.</blockquote>
-    <div class="syn">
+    <div class="syn" id="syn-main">
       <p data-i18n="syn1">Konzentriert und geschickt springen die Kinder von Grünfläche zu Grünfläche. Bis einer der Jungen doch auf den Asphalt tritt: Seine Schuhsohle schmilzt und zieht Fäden. Aus dem Spiel wird Ernst.</p>
-      <div class="more">
-      <p data-i18n="syn2">Die Tonalität ist bewusst spielerisch, getragen von eigens komponierter Musik. Die Leichtigkeit der Kinder steht im Kontrast dazu, dass gerade sie als nächste Generation mit den Folgen leben werden.</p>
-      <p data-i18n="syn3">Die Hitze trifft alle in der Stadt. Dafür steht die Mutter, die sich mit dem Kinderwagen über den weichen Asphalt kämpft, während die Kinder auf dem Grünstreifen einen Ausweg gefunden haben. Einen, der auf Dauer keine Lösung ist.</p>
-      </div>
+      <p class="more" data-i18n="syn2">Die Tonalität ist bewusst spielerisch, getragen von eigens komponierter Musik. Die Leichtigkeit der Kinder steht im Kontrast dazu, dass gerade sie als nächste Generation mit den Folgen leben werden.</p>
+      <p class="more" data-i18n="syn3">Die Hitze trifft alle in der Stadt. Dafür steht die Mutter, die sich mit dem Kinderwagen über den weichen Asphalt kämpft, während die Kinder auf dem Grünstreifen einen Ausweg gefunden haben. Einen, der auf Dauer keine Lösung ist.</p>
       <p class="tag" data-i18n="tag">Bald spielen alle mit.</p>
-      <button class="more-btn" type="button" data-i18n="more">Mehr lesen</button>
+      <button class="more-btn" type="button" aria-expanded="false" aria-controls="syn-main">Mehr lesen</button>
     </div>
   </div>
-  <div class="grid bg more">
+  <div class="grid bg">
     <span class="label" data-i18n="bg.label">Spec Ad für GERICS</span>
     <div class="syn">
       <p data-i18n="bg1">GERICS, das Climate Service Center Germany am Helmholtz-Zentrum Hereon, unterstützt Politik, Verwaltung und Wirtschaft bei der Anpassung an den Klimawandel, etwa Städte bei einer klimaangepassten Stadtentwicklung.</p>
@@ -440,7 +439,7 @@
        Die englische Datei wird automatisch erkannt, sobald sie im Ordner liegt. Bis dahin läuft auf Englisch die deutsche Fassung.
        YouTube-Link unter dem Player: Video-ID in data-youtube-de / data-youtube-en (Teil nach "watch?v="). -->
   <div class="player" id="player" data-film-de="video/de/film.mp4" data-film-en="video/en/film.mp4" data-youtube-de="0uduK2o4YuY" data-youtube-en="">
-    <img src="img/still-01.jpg" alt="">
+    <img src="img/still-01.jpg" alt="" id="player-thumb">
     <a class="play" href="video/de/film.mp4">
       <span class="tri" aria-hidden="true"></span>
       <span class="t" data-i18n="play">Film ansehen<small>1 min 19 s · mit Ton</small></span>
@@ -529,5 +528,6 @@
 
 
 <script src="js/main.js" defer></script>
+<script src="js/reveal.js" defer></script>
 </body>
 </html>
