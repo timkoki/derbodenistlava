@@ -6,3 +6,12 @@ Hier liegt die deutsche Fassung des Films als  film.mp4
 Soll eine neue Fassung auf die Seite, die alte Datei einfach durch die
 neue ersetzen, wieder mit dem Namen  film.mp4 .
 Export-Einstellungen siehe LIES-MICH.txt im Ordner "en".
+
+UNTERTITEL (optional, für Barrierefreiheit)
+Untertitel als WebVTT-Datei (.vtt) neben den Film legen:
+  untertitel-de.vtt   deutsche Untertitel
+  untertitel-en.vtt   englische Untertitel (hilfreich, solange es keine englische Fassung gibt)
+Der Player erkennt sie automatisch, sie lassen sich dann über das Untertitel-Symbol einschalten.
+Auf der englischen Seite werden englische Untertitel automatisch eingeschaltet, auf der deutschen die deutschen.
+Export z. B. aus DaVinci Resolve (Datei > Exportieren > Untertitel, Format WebVTT)
+oder Premiere Pro (Untertitel exportieren als .srt, dann z. B. mit subtitletools umwandeln).

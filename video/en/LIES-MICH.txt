@@ -19,3 +19,7 @@ in index.html beim Player bei data-youtube-en eintragen.
 Dann zeigt der Link "Watch on YouTube" auf die englische Fassung.
 
 Diese Textdatei kann im Ordner bleiben.
+
+UNTERTITEL (optional)
+Untertitel für die englische Fassung als  untertitel-en.vtt  (und optional  untertitel-de.vtt )
+in diesen Ordner legen. Der Player erkennt sie automatisch.

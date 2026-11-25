@@ -14,13 +14,6 @@
 <link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <style>
-  @font-face{font-family:"Anton";src:url(fonts/anton-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow";src:url(fonts/barlow-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow";src:url(fonts/barlow-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
   :root{
     --lava:#FEED00;
     --ink:#121110;
@@ -28,10 +21,10 @@
     --muted:#6d6a64;
     --line:rgba(18,17,16,.16);
     --pad:clamp(20px,4.2vw,64px);
-    /* Roc Grotesk Variable (Adobe Fonts, Kit qnu3biy): Breite über "wdth" (50 = Compressed, 100 = normal). Anton/Barlow nur als Fallback. */
-    --f-display:"roc-grotesk-variable","Anton",Impact,sans-serif;
-    --f-cond:"roc-grotesk-variable","Barlow Condensed",sans-serif;
-    --f-body:"roc-grotesk-variable","Barlow",system-ui,sans-serif;
+    /* Roc Grotesk Variable (Adobe Fonts, Kit qnu3biy): Breite über "wdth" (50 = Compressed, 100 = normal). Ohne Kit greifen Systemschriften. */
+    --f-display:"roc-grotesk-variable","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+    --f-cond:"roc-grotesk-variable","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+    --f-body:"roc-grotesk-variable",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;font-synthesis:none;font-variation-settings:"wdth" 100}
@@ -63,7 +56,6 @@
 <p>Eine Übermittlung in die USA findet statt. GitHub stützt sich dafür auf das EU-US Data Privacy Framework und auf Standardvertragsklauseln der EU-Kommission. Weitere Informationen: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub-Datenschutzerklärung</a>.</p>
 <h2>4. Schriftarten (Adobe Fonts)</h2>
 <p>Für die Darstellung der Schrift Roc Grotesk nutzen wir Adobe Fonts, einen Dienst der Adobe Systems Software Ireland Ltd., 4-6 Riverwalk, Citywest Business Campus, Dublin 24, Irland. Beim Aufruf der Website lädt euer Browser die Schriftdateien von Servern von Adobe. Dabei wird eure IP-Adresse an Adobe übertragen. Laut Adobe werden dabei keine Cookies gesetzt. Eine Übermittlung in die USA ist möglich; Adobe ist unter dem EU-US Data Privacy Framework zertifiziert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in einer einheitlichen Darstellung der Website. Weitere Informationen: <a href="https://www.adobe.com/de/privacy/policies/adobe-fonts.html" rel="noopener">adobe.com/de/privacy/policies/adobe-fonts.html</a>.</p>
-<p>Alle übrigen Schriftdateien liegen auf unserem eigenen Server. Dabei werden keine Daten an Dritte übertragen.</p>
 <h2>5. Videos</h2>
 <p>Der Film und die kurzen Videos im Startbereich werden direkt von dieser Website ausgeliefert. Dabei werden keine Daten an weitere Dritte übertragen.</p>
 <p>Unter dem Film verlinken wir auf YouTube. Das ist ein normaler Link: Erst wenn ihr ihn anklickt, verlasst ihr diese Website, und es gelten die Datenschutzbestimmungen von YouTube.</p>

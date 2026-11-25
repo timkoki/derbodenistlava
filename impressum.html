@@ -14,13 +14,6 @@
 <link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <style>
-  @font-face{font-family:"Anton";src:url(fonts/anton-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-300-normal.woff2) format("woff2");font-weight:300;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow Condensed";src:url(fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow";src:url(fonts/barlow-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-  @font-face{font-family:"Barlow";src:url(fonts/barlow-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
   :root{
     --lava:#FEED00;
     --ink:#121110;
@@ -28,10 +21,10 @@
     --muted:#6d6a64;
     --line:rgba(18,17,16,.16);
     --pad:clamp(20px,4.2vw,64px);
-    /* Roc Grotesk Variable (Adobe Fonts, Kit qnu3biy): Breite über "wdth" (50 = Compressed, 100 = normal). Anton/Barlow nur als Fallback. */
-    --f-display:"roc-grotesk-variable","Anton",Impact,sans-serif;
-    --f-cond:"roc-grotesk-variable","Barlow Condensed",sans-serif;
-    --f-body:"roc-grotesk-variable","Barlow",system-ui,sans-serif;
+    /* Roc Grotesk Variable (Adobe Fonts, Kit qnu3biy): Breite über "wdth" (50 = Compressed, 100 = normal). Ohne Kit greifen Systemschriften. */
+    --f-display:"roc-grotesk-variable","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+    --f-cond:"roc-grotesk-variable","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+    --f-body:"roc-grotesk-variable",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;font-synthesis:none;font-variation-settings:"wdth" 100}
