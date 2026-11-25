@@ -34,7 +34,7 @@
 
   /* Alle Inhalte der übrigen Bereiche, nach Art: Überschriften, Bilder, Textblöcke */
   var BLOCKS='h2,h3,.label,blockquote,p,figure,.player,dl > div,.row,.lg,li,.more-btn';
-  q('main section:not(.hero)').forEach(function(sec){
+  q('main > section:not(.hero), main > div').forEach(function(sec){
     q(BLOCKS,sec).forEach(function(el){
       if(el.closest('[data-rv]')) return;
       if(el.closest('footer')) return;
@@ -52,7 +52,7 @@
       e.target.style.setProperty('--d',Math.min(i,6)*0.06+'s');
       e.target.classList.add('in'); io.unobserve(e.target);
     });
-  },{rootMargin:'0px 0px -8% 0px',threshold:0}) : null;
+  },{rootMargin:'0px 0px -18% 0px',threshold:0}) : null;
   function watch(el){ if(io) io.observe(el); else el.classList.add('in'); }
   q('[data-rv]').forEach(function(el){ if(el.closest('.hero')) return; watch(el); });
 

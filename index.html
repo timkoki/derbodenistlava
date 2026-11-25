@@ -213,6 +213,7 @@
   .hero h1{font-size:clamp(64px,13vw,236px);white-space:nowrap;width:max-content}
   .hero h1 span{display:inline-block}
   @media (min-width:721px){ .hero h1{margin-bottom:-.15em} }
+  @media (max-width:720px){ .hero h1 span + span{margin-top:-.2em} .hero h1{margin-bottom:-.1em} }
   .byline{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px 32px;margin-top:clamp(12px,1.6vw,22px)}
   .byline p{font-family:var(--f-cond);font-size:clamp(19px,2.1vw,34px);font-weight:700;text-transform:uppercase;letter-spacing:.005em;line-height:1.1;font-variation-settings:"wdth" 50}
   .byline p i{font-style:normal;font-weight:300;text-transform:none;margin-right:.25em}
@@ -353,9 +354,9 @@
   /* ---------- Aufbau-Animationen (nur mit JS und ohne "Bewegung reduzieren") ---------- */
   .mw{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .02em .06em;margin:0 -.02em -.06em}
   .mi{display:inline-block}
-  html.rv .mi{transform:translateY(105%);filter:blur(5px);transition:transform .7s cubic-bezier(.2,.8,.1,1) calc(var(--d,0s) + var(--w,0s)),filter .6s ease calc(var(--d,0s) + var(--w,0s))}
+  html.rv .mi{transform:translateY(105%);filter:blur(5px);transition:transform .85s cubic-bezier(.2,.8,.1,1) calc(var(--d,0s) + var(--w,0s)),filter .6s ease calc(var(--d,0s) + var(--w,0s))}
   html.rv .in .mi{transform:none;filter:none}
-  html.rv [data-rv="up"]{opacity:0;transform:translateY(20px);filter:blur(8px);transition:opacity .55s cubic-bezier(.2,.7,.1,1) var(--d,0s),transform .6s cubic-bezier(.2,.7,.1,1) var(--d,0s),filter .55s ease var(--d,0s)}
+  html.rv [data-rv="up"]{opacity:0;transform:translateY(40px);filter:blur(8px);transition:opacity .7s cubic-bezier(.2,.7,.1,1) var(--d,0s),transform .85s cubic-bezier(.2,.7,.1,1) var(--d,0s),filter .7s ease var(--d,0s)}
   html.rv [data-rv="up"].in{opacity:1;transform:none;filter:none}
   html.rv [data-rv="clip"] > *{clip-path:inset(100% 0 0 0);transition:clip-path .75s cubic-bezier(.7,0,.2,1) var(--d,0s)}
   html.rv [data-rv="clip"].in > *{clip-path:inset(0 0 0 0)}
